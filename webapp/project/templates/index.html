@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block title %}Powerline Vegetation Analysis{% endblock %}
+{% block content %}
+
+    <div class="container">
+
+      <h1>Bootstrap starter template</h1>
+      <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
+      <div id="heat-map" style="height:800px; width:800px;"></div>
+
+    </div> <!-- /container -->
+
+{% endblock %}
+{% block script %}
+{{ super() }}
+  <!-- Custom fonts for this template-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+
+    <!-- Custom styles for this template-->
+    <link rel="stylesheet" href="/static/css/leaflet.css"/>
+    <link rel="stylesheet" href="/static/css/MarkerCluster.css" />
+    <link rel="stylesheet" href="/static/css/MarkerCluster.Default.css" />
+
+    <script src="/static/js/leaflet.js"></script>
+    <script src="/static/js/leaflet.markercluster.js"></script>
+    <script src="http://unpkg.com/babel-polyfill@6.26.0/dist/polyfill.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="/static/js/index.js"></script>
+
+{% endblock %}

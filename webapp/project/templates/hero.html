@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+{% block title %}Kamerat{% endblock %}
+{% block content %}
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="" style="background-color:#222;padding:50px 0 0 5px;margin-bottom:5px">
+        <div class="title">Historia</div>
+        <div class="chart3-example"></div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="camera-map" style="width:550px;height:510px">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col mini-box">
+                        <select id="camid" class="selectpicker">
+                        </select><!-- /select -->
+                    </div> <!-- /col -->
+                    <div class="col mini-box" style="max-width:70px;">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="allCheck" checked="checked">
+                            <label class="form-check-label" for="allCheck">
+                                Kaikki
+                            </label>
+                        </div>
+                    </div> <!-- /col -->
+                    <div class="col mini-box">
+                        <div class="form-group">
+                            <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                                <input id="dp1" type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1"/>
+                                <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                                    <div class="input-group-text">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                </div>
+                            </div> <!-- /input-group -->
+                        </div> <!-- /form-group -->
+                    </div> <!-- /col -->
+                </div> <!-- /row -->
+                <div class="row">
+                    <div class="col mini-box">
+                        <img id="camview" src="/cameraimages/C0150200/2019/04/21/15/00" style="max-width:560px;">
+                    </div> <!-- /col -->
+                </div> <!-- /row -->
+            </div> <!-- /col -->
+        </div> <!-- /row -->
+    </div> <!-- /container -->
+{% endblock %}
+{% block script %}
+{{ super() }}
+    <link rel="stylesheet" href="/static/css/leaflet.css"/>
+    <link rel="stylesheet" href="/static/css/MarkerCluster.css" />
+    <link rel="stylesheet" href="/static/css/MarkerCluster.Default.css" />
+
+    <script src="/static/js/leaflet.js"></script>
+    <script src="/static/js/leaflet.markercluster.js"></script>
+    <script src="http://unpkg.com/babel-polyfill@6.26.0/dist/polyfill.js"></script>
+    <!--<script src="/static/js/mapd3.js"></script>-->
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="/static/js/browser-connector.js"></script>
+    <script src="/static/js/mapd-crossfilter.js"></script>
+    <script src="/static/js/mapdc.js"></script>
+    <script src="/static/js/hero.js"></script>
+{% endblock %}

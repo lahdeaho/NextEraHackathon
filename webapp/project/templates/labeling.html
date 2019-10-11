@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+{% block title %}Labeling Tool{% endblock %}
+{% block content %}
+    <div class="container">
+        <br/>
+        <br/>
+        <br/>
+
+            <div class="row">
+                <div class="col mini-box">
+                    <select id="camid" class="selectpicker">
+                    </select><!-- /select -->
+                </div> <!-- /col -->
+                <div class="col mini-box">
+                    <div class="form-group">
+                        <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                            <input id="dp1" type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1"/>
+                            <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                                <div class="input-group-text">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                            </div>
+                        </div> <!-- /input-group -->
+                    </div> <!-- /form-group -->
+                </div> <!-- /col -->
+            </div> <!-- /row -->
+            <div id="labeledAlready" class="row" style="display:none">
+                <span style="color:red;font-weight:bold;">KUVA ON JO MERKITTY!</span>
+            </div>
+            <div class="col-md-6">
+                <div class="row" style="overflow-y: hidden;">
+                    <img id="camview" src="/cameraimages/C0150200/2019/04/21/15/00" 
+                         style="height: 400px; max-width: 100%;">
+                    <img id="cammask" src="/static/img/masks/mask_C0150200.png" 
+                             style="position:relative; height: 400px; max-width: 100%; top: -400px;">
+                </div> <!-- /row -->
+                <div class="row" style="margin-top:-400px">
+                    <div class="col mini-box">
+                        <div id="btnBad"
+                             style="cursor: pointer; background-color:red; width: 100%; line-height: 100px; text-align: center; color: black; padding: 20px;">
+                             <h1>Huono</h1>
+                        </div>                           
+                    </div> <!-- /col -->
+                    <div class="col mini-box">
+                        <div id="btnSkip" 
+                             style="cursor: pointer; background-color:gray; width: 100%; line-height: 100px; text-align: center; color: black; padding: 20px;">
+                            <h1>Ohi</h1>
+                        </div>
+                    </div> <!-- /col -->
+                    <div class="col mini-box">
+                        <div id="btnGood" 
+                             style="cursor: pointer; background-color:green; width: 100%; line-height: 100px; text-align: center; color: black; padding: 20px;">
+                            <h1>Hyvä</h1>
+                        </div>
+                    </div> <!-- /col -->
+                </div> <!-- /row -->
+        </div> <!-- /col -->
+        
+    </div> <!-- /container -->
+{% endblock %}
+{% block script %}
+{{ super() }}
+    <script src="http://unpkg.com/babel-polyfill@6.26.0/dist/polyfill.js"></script>
+    <!--<script src="/static/js/mapd3.js"></script>-->
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="/static/js/browser-connector.js"></script>
+    <script src="/static/js/mapd-crossfilter.js"></script>
+    <script src="/static/js/mapdc.js"></script>
+    <script src="/static/js/labeling.js"></script>
+{% endblock %}
