@@ -1,1 +1,5 @@
-put jupyter notebooks here
+## Automatic Daily Process
+
+### Notebooks
+* satellite-downloader-daily
+* get-dem-model
