@@ -19,3 +19,4 @@
 ## TODO
 * Organize notebooks
 * Extract python scripts from notebooks to process scripts
+* Extract instructions from notebooks
