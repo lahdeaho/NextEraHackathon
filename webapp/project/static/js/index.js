@@ -6,9 +6,9 @@ $(function() {
     var h = 0.0033
     var v = 0.0014
     var ndvi_curr_url = '/static/map_images/heatmap_rgba.png',
-        ndvi_month_url = '/static/map_images/heatmap.png',
-        ndvi_half_url = '/static/map_images/stadium_rgba.png',
-        ndvi_year_url = '/static/map_images/heatmap_rgba.png',
+        ndvi_month_url = '/static/map_images/heatmap_rgba_month.png',
+        ndvi_half_url = '/static/map_images/heatmap_rgba_halfyear.png',
+        ndvi_year_url = '/static/map_images/heatmap_rgba_year.png',
         imageBounds = [
                         L.latLng(65.8214035188828 + v, 24.869962219258937 + h),
                         L.latLng(64.8214388312971 + v, 27.213549565024742 + h)
